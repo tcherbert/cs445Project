@@ -1,0 +1,18 @@
+{"mindate":"1994-08-15","maxdate":"2020-10-23","name":"Autaugaville, AL 36003","datacoverage":0.95,"id":"ZIP:36003"}
+{"mindate":"1938-12-01","maxdate":"2020-10-24","name":"Billingsley, AL 36006","datacoverage":1,"id":"ZIP:36006"}
+{"mindate":"1994-08-15","maxdate":"2020-10-25","name":"Deatsville, AL 36022","datacoverage":1,"id":"ZIP:36022"}
+{"mindate":"1995-02-24","maxdate":"2020-10-23","name":"Marbury, AL 36051","datacoverage":0.95,"id":"ZIP:36051"}
+{"mindate":"1994-08-15","maxdate":"2020-10-23","name":"Prattville, AL 36066","datacoverage":0.95,"id":"ZIP:36066"}
+{"mindate":"1900-01-01","maxdate":"2020-10-23","name":"Prattville, AL 36067","datacoverage":1,"id":"ZIP:36067"}
+{"mindate":"1948-06-01","maxdate":"2020-10-23","name":"Verbena, AL 36091","datacoverage":1,"id":"ZIP:36091"}
+{"mindate":"1895-01-01","maxdate":"2020-10-25","name":"Selma, AL 36703","datacoverage":1,"id":"ZIP:36703"}
+{"mindate":"1994-08-15","maxdate":"2020-10-23","name":"Jones, AL 36749","datacoverage":0.95,"id":"ZIP:36749"}
+{"mindate":"1940-01-01","maxdate":"2020-10-23","name":"Plantersville, AL 36758","datacoverage":1,"id":"ZIP:36758"}
+{"mindate":"1940-03-27","maxdate":"2020-10-24","name":"Atmore, AL 36502","datacoverage":1,"id":"ZIP:36502"}
+{"mindate":"1913-11-01","maxdate":"2020-10-25","name":"Bay Minette, AL 36507","datacoverage":1,"id":"ZIP:36507"}
+{"mindate":"1994-08-15","maxdate":"2020-10-23","name":"Bon Secour, AL 36511","datacoverage":0.95,"id":"ZIP:36511"}
+{"mindate":"1994-08-15","maxdate":"2020-10-25","name":"Daphne, AL 36526","datacoverage":1,"id":"ZIP:36526"}
+{"mindate":"1994-08-15","maxdate":"2020-10-25","name":"Spanish Fort, AL 36527","datacoverage":1,"id":"ZIP:36527"}
+{"mindate":"1956-01-01","maxdate":"2020-10-23","name":"Elberta, AL 36530","datacoverage":1,"id":"ZIP:36530"}
+{"mindate":"1912-05-07","maxdate":"2020-10-25","name":"Fairhope, AL 36532","datacoverage":1,"id":"ZIP:36532"}
+{"mindate":"1952-01-01","maxdate":"2020-10-25","name":"Foley, AL 36535","datacoverage":1,"id":"ZIP:36535"}
