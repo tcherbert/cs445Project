@@ -61,6 +61,7 @@ for i in mydict.keys():
                     
                     #Too many requests
                     if r.status_code == 429 or r.status_code == 503:
+                        #TODO Add Timestamp to this...
                         print(r.status_code)
                         print('Sleeping on: ' + n + ' with code: ' + str(r.status_code) + '\n')
                         codes_429.write('Sleeping on: ' + n + ' with code: ' + str(r.status_code) + '\n')
