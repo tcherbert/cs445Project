@@ -1,1 +1,1 @@
-Error in processing Zip: 36008 with length 2 or less
+Error in processing Zip: 36003 with code: 429

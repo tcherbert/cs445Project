@@ -1,9 +1,11 @@
 import requests
+import time
 
 headers     = {'token': 'gHlnfzHkxbaAlsIwGrxtTPEYmwgVjXpv'}
 error_log   = open('error-log.txt','w')
 results     = open('results.txt','w')
 fp          = open('ZIP-COUNTY-FIPS_2010-03.csv','r')
+codes_429   = open('error-429.txt','w')
 mindate     = 0
 
 
@@ -38,19 +40,33 @@ for i in mydict.keys():
     for j in mydict[i].keys():
         #Zip
         for n in mydict[i][j]:
-            r = requests.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/locations/ZIP:' + n, headers = headers)
-            # print(r.status_code)
-            #Success
-            if r.status_code == 200:
-                response_dict = r.json()
-                response_text = r.text
-                #print(len(r.text))
-                if len(r.text) > 2:
-                    #print(response_dict['mindate'])
-                    results.write(response_text + '\n')
+            print('before process')
+            def process():
+                print('inside process')
+                r = requests.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/locations/ZIP:' + n, headers = headers)
+                # print(r.status_code)
+                #Success
+                if r.status_code == 200:
+                    response_dict = r.json()
+                    response_text = r.text
+                    #print(len(r.text))
+                    if len(r.text) > 2:
+                        #print(response_dict['mindate'])
+                        results.write(response_text + '\n')
+                    else:
+                        error_log.write('Error in processing Zip: ' + n + ' with length 2 or less\n')
+                #Not Found.. or possible another code..
                 else:
-                    error_log.write('Error in processing Zip: ' + n + ' with length 2 or less\n')
-            #Not Found.. or possible another code..
-            else:
-                error_log.write('Error in processing Zip: ' + n + ' with code: ' + r.status_code + '\n')
-            # if r.status_code == 404:
+                    error_log.write('Error in processing Zip: ' + n + ' with code: ' + str(r.status_code) + '\n')
+                    
+                    #Too many requests
+                    if r.status_code == 429 or r.status_code == 503:
+                        print(r.status_code)
+                        print('Sleeping on: ' + n + ' with code: ' + str(r.status_code) + '\n')
+                        codes_429.write('Sleeping on: ' + n + ' with code: ' + str(r.status_code) + '\n')
+                        #sleep 6 hours
+                        time.sleep(60*60*6)
+                        process()
+            process()
+                    
+                    
