@@ -3,7 +3,7 @@ import time
 
 headers     = {'token': 'gHlnfzHkxbaAlsIwGrxtTPEYmwgVjXpv'}
 error_log   = open('error-log.txt','w')
-results     = open('results.txt','w')
+results     = open('results.txt','rw')
 fp          = open('ZIP-COUNTY-FIPS_2010-03.csv','r')
 codes_429   = open('error-429.txt','w')
 mindate     = 0
