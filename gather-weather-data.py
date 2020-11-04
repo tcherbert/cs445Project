@@ -54,6 +54,6 @@ for state in stateDict:
             # Can cause keyerror if not all zips are accounted for
             min = zipDatesDict[zip][0]
             max = zipDatesDict[zip][1]
-            # Call API using above query
+            # GHCND dataset is for daily summaries
             r = requests.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:' + zip + '&startdate=' + min + '&enddate=' + max, headers = headers)
             # Dump results into files by year
