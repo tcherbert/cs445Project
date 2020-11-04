@@ -51,6 +51,7 @@ for state in stateDict:
         for zip in county:
             path = os.getcwd() + "/results/" + state + "/" + county + "/" + zip
             os.mkdir(path)
+            # Can cause keyerror if not all zips are accounted for
             min = zipDatesDict[zip][0]
             max = zipDatesDict[zip][1]
             # Call API using above query
