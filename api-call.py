@@ -1,6 +1,5 @@
 import requests
 import time
-import re
 
 headers     = {'token': 'gHlnfzHkxbaAlsIwGrxtTPEYmwgVjXpv'}
 error_log   = open('error-log.txt','w')
