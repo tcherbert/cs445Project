@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+
+		<link rel='stylesheet' id='bootstrap-css' href='./assets/css/bootstrap3.4.css' media='all' />
+
+		
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+
+	<body>
+
+
+		<div class="fl-html">
+			
+			<div class="preload-container">
+				<div class="col-sm-12 preloader">
+					<div class="circ1"></div>
+					<div class="circ2"></div>
+					<div class="circ3"></div>
+					<div class="circ4"></div>
+				</div>
+			</div>
+			<div class="world">
+				<div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+					<h3>Select a County</h3>
+				</div>
+				<div class="map col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0"></div>
+				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+					<h3>Filter by Year</h3>
+					<select id="mapControls" class="o-select">
+						<option value="2100">All Years</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option>
+					</select>
+					<div class="clear-fix"></div>
+					<div class="readout"></div>
+					<div class="areaLegend"></div>
+					<div id="slider-control"></div>
+				</div>
+			</div>
+		</div>
+
+	<script src='./assets/js/jquery1.12.4.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js" charset="utf-8"></script>
+	<script src="./assets/js/jquery.mapael.min.js" charset="utf-8"></script>
+	<!-- <script src="http://mpm-project.org/wp-content/themes/uofi-theme/js/jquery.rotaryswitch.js" charset="utf-8"></script> -->
+	<script src="./assets/js/mapdata.js" charset="utf-8"></script>
+	<script src="./assets/js/map.js" charset="utf-8"></script>
+	<script src="./assets/js/main.js" charset="utf-8"></script>
+	
+	<div class="map-container clearfix">
+		<noscript><h2>This interactive map requires Javascript to function.<br>Please turn on or use a device that has Javascript enabled.</h2></noscript>
+	</div>
+
+	</body>
+</html>
