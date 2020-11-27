@@ -1,0 +1,1 @@
+{"metadata":{"resultset":{"offset":1,"count":2,"limit":12}},"results":[{"date":"1983-01-01T00:00:00","datatype":"DYFG","station":"GHCND:USC00010583","attributes":" ","value":27},{"date":"1983-01-01T00:00:00","datatype":"DYTS","station":"GHCND:USC00010583","attributes":" ","value":40}]}

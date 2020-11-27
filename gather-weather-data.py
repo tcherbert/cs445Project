@@ -10,9 +10,41 @@ import json
 headers     = {'token': 'gHlnfzHkxbaAlsIwGrxtTPEYmwgVjXpv'}
 stateDict = {}
 zipDatesDict = {}
-zipDates = open("results.txt")
+zipDates = open("new.results.txt")
 zipcodes = open("ZIP-COUNTY-FIPS_2010-03.csv")
 missingZips = open("missingZips.txt", "w")
+headerErrors = open("headerErrors.txt","w")
+
+
+
+def apiCall(state,county,zipcode,year):
+    print("Running request for "  + state + "/" + county + "/" + zipcode + "/" + str(year) + "\n")
+    r = requests.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GSOY&locationid=ZIP:' + zipcode + '&startdate=' + startDate + '&enddate=' + endDate + "&limit=12", headers = headers)
+    print("Status code: " + str(r.status_code) + " for " + state + "/" + county + "/" + zipcode + "/" + str(year) + "\n")
+
+    if r.status_code == 200:
+        if not r.text == "{}":
+            w = open(path + "/results/" + state + "/" + county + "/" + zipcode + "/" + str(year), "w")
+            w.write(r.text)
+            w.close()
+            print("Recieved Data for " + state + "/" + county + "/" + zipcode + "/" + str(year) + "\n")
+        else:
+            print("Recieved {} for " + state + "/" + county + "/" + zipcode + "/" + str(year) + "\n")
+    #Too many requests
+    elif r.status_code == 429 or r.status_code == 503:
+        print("429 or 503... Sleeping...\n")
+        headerErrors.write('Sleeping on:  with code: ' + str(r.status_code) + " on state: " + state + " county:" + county + " zipcode: " + str(zipcode) + " year: " + str(year) + "\n")
+        #sleep 1 hours
+        time.sleep(60*60*1)
+        apiCall(state,county,zipcode,year)
+    
+    else:
+        headerErrors.write("Error " + str(r.status_code) + " on state: " + state + " county:" + county + " zipcode: " + str(zipcode) + " year: " + str(year) + "\n")
+
+
+
+
+
 
 
 
@@ -127,17 +159,34 @@ for state in stateDict.items():
                     endDate = minDate
                     endDate = endDate.replace(endDate[0:4],str(year))
 
-                r = requests.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:' + zipcode + '&startdate=' + startDate + '&enddate=' + endDate, headers = headers)
                 
-                if not r.text == "{}":
-                    w = open(path + "/results/" + state[0] + "/" + county[0] + "/" + zipcode + "/" + str(year), "w")
-                    w.write(r.text)
-                    w.close()
+                
+                
+                
+                apiCall(state[0],county[0],zipcode,year)
+                
+                # print("Running request for "  + state[0] + "/" + county[0] + "/" + zipcode + "/" + str(year) + "\n")
+                # r = requests.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GSOY&locationid=ZIP:' + zipcode + '&startdate=' + startDate + '&enddate=' + endDate + "&limit=12", headers = headers)
+                # print("Status code: " + str(r.status_code) + " for " + state[0] + "/" + county[0] + "/" + zipcode + "/" + str(year) + "\n")
 
-            # GHCND dataset is for daily summaries
-            #TODO: fix this. Can't do min-max. Has to be in 1 year increments
-            # r = requests.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:' + zip + '&startdate=' + min + '&enddate=' + max, headers = headers)
-            # Dump results into files by year
-            # print(r.text)
-            # time.sleep(10)
-            #break
+                # if r.status_code == 200:
+                #     if not r.text == "{}":
+                #         w = open(path + "/results/" + state[0] + "/" + county[0] + "/" + zipcode + "/" + str(year), "w")
+                #         w.write(r.text)
+                #         w.close()
+                #         print("Recieved Data for " + state[0] + "/" + county[0] + "/" + zipcode + "/" + str(year) + "\n")
+                #     else:
+                #         print("Recieved {} for " + state[0] + "/" + county[0] + "/" + zipcode + "/" + str(year) + "\n")
+                # #Too many requests
+                # elif r.status_code == 429 or r.status_code == 503:
+                #     print("429 or 503... Sleeping...\n")
+                #     headerErrors.write('Sleeping on:  with code: ' + str(r.status_code) + " on state: " + state[0] + " county:" + county[0] + " zipcode: " + str(zipcode) + " year: " + str(year) + "\n")
+                #     #sleep 1 hours
+                #     time.sleep(60*60*1)
+                
+                # else:
+                #     headerErrors.write("Error " + str(r.status_code) + " on state: " + state[0] + " county:" + county[0] + " zipcode: " + str(zipcode) + " year: " + str(year) + "\n")
+
+
+
+

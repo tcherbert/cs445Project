@@ -1,0 +1,6 @@
+Sleeping on:  with code: 503 on state: AL county:Calhoun County zipcode: 36201 year: 1929
+Sleeping on:  with code: 429 on state: AL county:Clay County zipcode: 35072 year: 1941
+Sleeping on:  with code: 429 on state: AL county:Clay County zipcode: 35072 year: 1943
+Sleeping on:  with code: 429 on state: AL county:Clay County zipcode: 35072 year: 1943
+Sleeping on:  with code: 429 on state: AL county:Clay County zipcode: 35072 year: 1956
+Sleeping on:  with code: 429 on state: AL county:Clay County zipcode: 35072 year: 1956

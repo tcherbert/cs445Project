@@ -2,8 +2,9 @@ import requests
 import time
 
 headers     = {'token': 'gHlnfzHkxbaAlsIwGrxtTPEYmwgVjXpv'}
-results     = open('results.txt','a')
-
+results     = open('new.results.txt','a')
+counter     = 0
+limit       = 1000
 
 
 def process():

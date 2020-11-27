@@ -1,0 +1,1 @@
+{"metadata":{"resultset":{"offset":1,"count":2,"limit":12}},"results":[{"date":"2016-01-01T00:00:00","datatype":"PRCP","station":"GHCND:US1ALBW0003","attributes":" ,N","value":1473.3},{"date":"2016-01-01T00:00:00","datatype":"PRCP","station":"GHCND:US1ALBW0004","attributes":" ,N","value":1432.4}]}
