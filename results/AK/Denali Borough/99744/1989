@@ -1,0 +1,1 @@
+{"metadata":{"resultset":{"offset":1,"count":2,"limit":12}},"results":[{"date":"1989-01-01T00:00:00","datatype":"DSND","station":"GHCND:USC00502005","value":179},{"date":"1989-01-01T00:00:00","datatype":"EMSD","station":"GHCND:USC00502005","attributes":" ,0,1223, ","value":711}]}

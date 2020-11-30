@@ -1,0 +1,1 @@
+{"metadata":{"resultset":{"offset":1,"count":2,"limit":12}},"results":[{"date":"1968-01-01T00:00:00","datatype":"DSND","station":"GHCND:USW00026633","value":233},{"date":"1968-01-01T00:00:00","datatype":"EMSD","station":"GHCND:USW00026633","attributes":" ,X,1231,+","value":229}]}

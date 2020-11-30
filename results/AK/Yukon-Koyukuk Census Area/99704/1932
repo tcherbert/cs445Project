@@ -1,0 +1,1 @@
+{"metadata":{"resultset":{"offset":1,"count":2,"limit":12}},"results":[{"date":"1932-01-01T00:00:00","datatype":"HDSD","station":"GHCND:USW00026435","attributes":"7","value":7183.7},{"date":"1932-01-01T00:00:00","datatype":"HTDD","station":"GHCND:USW00026435","attributes":"6","value":7183.7}]}

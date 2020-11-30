@@ -1,13 +1,47 @@
 # Example query
 # https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:28801&startdate=2010-05-01&enddate=2010-05-01
 
+import sys
+
+sys.setrecursionlimit(999999)
+
 import requests
 import os
 import re
 import time
 import json
 
-headers     = {'token': 'gHlnfzHkxbaAlsIwGrxtTPEYmwgVjXpv'}
+tokens = [
+    
+    "BmlCcsyqaBcSxVZnUDAXkgCDpCUVCByB",
+    "XRciPUOxBgmwhjwAbALbrNfEqFNFFPrC",
+    "ZRhHEzPffrvEXnbpbHIOEHQOQXShjgIk",
+    "BmlCcsyqaBcSxVZnUDAXkgCDpCUVCByB",
+    "dIVRjRwpkMrPrIqPapvpHGbNJtjQYdeh",
+    "QTjRsIVjZsekcdMfrJASXjMYYkvXADmR",
+    "SXtABmFhXLSAlkYIpSZBvziRdyQljKBo",
+    "ANeZYITulvZtGRxWFQZAtBbiFhDhYiHF",
+    "gHlnfzHkxbaAlsIwGrxtTPEYmwgVjXpv"
+]
+tokens1 = [
+    "SHHNHYvPBkpvBuFJbtblkLMLwWmcipFj",
+    "yLiZGsVTlDMpitbMSjVsGcRHvxLoszsa",
+    "smtWENTJOSkYGktLcZZVToKvUKUYqaFl",
+    "rVPmbOVsJHgYgqGaltJtZkjMevJryPuw",
+    "OClaZDorFxeHAIPvAfEVSldQHinmNEeB",
+    "jYQMhyNULLNBxTxrTykQhmZPkgIrYURR",
+    "DkXRpmXwLGQeKEThWoObOpGbSzGRoODi",
+    "JcklmyoExnvErQCDAkTsMvOdAIXFzUew",
+    "ToCqlUgasmranfHadSxkobxmZEMEWzKN",
+    "sjSiwqBSZSUNKxizbLRnIpySkZChqztp",
+]
+tokens2 = [
+    "pAnnanLcCpjkYqirJaZRBjRQkNKMilFk",
+]
+tokensLength = len(tokens)
+tokenCounter = 0
+
+
 stateDict = {}
 zipDatesDict = {}
 zipDates = open("new.results.txt")
@@ -17,9 +51,25 @@ headerErrors = open("headerErrors.txt","w")
 
 
 
+
+
+
+
+
+
+
 def apiCall(state,county,zipcode,year):
+    global tokenCounter
+    exceptFlag = 0
+    headers = {'token': tokens[tokenCounter]}
+    
+
     print("Running request for "  + state + "/" + county + "/" + zipcode + "/" + str(year) + "\n")
-    r = requests.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GSOY&locationid=ZIP:' + zipcode + '&startdate=' + startDate + '&enddate=' + endDate + "&limit=12", headers = headers)
+    try:
+        r = requests.get('https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GSOY&locationid=ZIP:' + zipcode + '&startdate=' + startDate + '&enddate=' + endDate + "&limit=12", headers = headers)
+    except:
+        print("******* Issue connecting. Try again. *******")
+        exceptFlag = 1
     print("Status code: " + str(r.status_code) + " for " + state + "/" + county + "/" + zipcode + "/" + str(year) + "\n")
 
     if r.status_code == 200:
@@ -31,12 +81,14 @@ def apiCall(state,county,zipcode,year):
         else:
             print("Recieved {} for " + state + "/" + county + "/" + zipcode + "/" + str(year) + "\n")
     #Too many requests
-    elif r.status_code == 429 or r.status_code == 503:
-        print("429 or 503... Sleeping...\n")
-        headerErrors.write('Sleeping on:  with code: ' + str(r.status_code) + " on state: " + state + " county:" + county + " zipcode: " + str(zipcode) + " year: " + str(year) + "\n")
-        #sleep 1 hours
-        time.sleep(60*60*1)
+    elif r.status_code == 429 or r.status_code == 503 or exceptFlag == 1:
+        tokenCounter += 1
+        if tokenCounter >= tokensLength:
+            tokenCounter = 0
+        #stopHere = input("Press Enter to Start again with token: " + str(tokens[tokenCounter]))
         apiCall(state,county,zipcode,year)
+
+        #headerErrors.write('Sleeping on:  with code: ' + str(r.status_code) + " on state: " + state + " county:" + county + " zipcode: " + str(zipcode) + " year: " + str(year) + "\n")
     
     else:
         headerErrors.write("Error " + str(r.status_code) + " on state: " + state + " county:" + county + " zipcode: " + str(zipcode) + " year: " + str(year) + "\n")
@@ -50,6 +102,11 @@ def apiCall(state,county,zipcode,year):
 
 
 
+
+
+
+
+stopHere = input("Press Enter to Start Program...")
 
 zipcodes.readline()
 while True:
@@ -70,9 +127,6 @@ while True:
     
     if not zipcode in stateDict[state][county]:
         stateDict[state][county].append(zipcode)
-
-
-
 
 
 
@@ -159,10 +213,6 @@ for state in stateDict.items():
                     endDate = minDate
                     endDate = endDate.replace(endDate[0:4],str(year))
 
-                
-                
-                
-                
                 apiCall(state[0],county[0],zipcode,year)
                 
                 # print("Running request for "  + state[0] + "/" + county[0] + "/" + zipcode + "/" + str(year) + "\n")

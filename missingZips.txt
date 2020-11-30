@@ -12,3 +12,195 @@
 36275,Cherokee County,AL
 36913,Choctaw County,AL
 36446,Clarke County,AL
+35082,Clay County,AL
+36261,Cleburne County,AL
+36429,Conecuh County,AL
+35010,Coosa County,AL
+36455,Covington County,AL
+36476,Covington County,AL
+35070,Cullman County,AL
+35540,Cullman County,AL
+36371,Dale County,AL
+35951,DeKalb County,AL
+35010,Elmore County,AL
+36503,Escambia County,AL
+36543,Escambia County,AL
+35990,Etowah County,AL
+35545,Fayette County,AL
+35559,Fayette County,AL
+36313,Geneva County,AL
+35448,Greene County,AL
+35491,Greene County,AL
+35441,Hale County,AL
+36310,Henry County,AL
+36302,Houston County,AL
+35005,Jefferson County,AL
+35006,Jefferson County,AL
+35015,Jefferson County,AL
+35041,Jefferson County,AL
+35048,Jefferson County,AL
+35060,Jefferson County,AL
+35119,Jefferson County,AL
+35123,Jefferson County,AL
+35139,Jefferson County,AL
+35142,Jefferson County,AL
+35181,Jefferson County,AL
+35219,Jefferson County,AL
+35249,Jefferson County,AL
+35260,Jefferson County,AL
+35285,Jefferson County,AL
+35293,Jefferson County,AL
+35294,Jefferson County,AL
+35295,Jefferson County,AL
+35617,Lauderdale County,AL
+35632,Lauderdale County,AL
+36865,Lee County,AL
+35615,Limestone County,AL
+35649,Limestone County,AL
+35742,Limestone County,AL
+36087,Macon County,AL
+35762,Madison County,AL
+35767,Madison County,AL
+35809,Madison County,AL
+35812,Madison County,AL
+35813,Madison County,AL
+35893,Madison County,AL
+35894,Madison County,AL
+35895,Madison County,AL
+35896,Madison County,AL
+35897,Madison County,AL
+35899,Madison County,AL
+36745,Marengo County,AL
+36763,Marengo County,AL
+36764,Marengo County,AL
+35950,Marshall County,AL
+35951,Marshall County,AL
+35964,Marshall County,AL
+36512,Mobile County,AL
+36568,Mobile County,AL
+36601,Mobile County,AL
+36644,Mobile County,AL
+36675,Mobile County,AL
+36439,Monroe County,AL
+36457,Monroe County,AL
+36458,Monroe County,AL
+36462,Monroe County,AL
+36470,Monroe County,AL
+36057,Montgomery County,AL
+36065,Montgomery County,AL
+36118,Montgomery County,AL
+36119,Montgomery County,AL
+36121,Montgomery County,AL
+36123,Montgomery County,AL
+36131,Montgomery County,AL
+36177,Montgomery County,AL
+35442,Pickens County,AL
+35471,Pickens County,AL
+36851,Russell County,AL
+35052,St. Clair County,AL
+35112,St. Clair County,AL
+35182,St. Clair County,AL
+35007,Shelby County,AL
+35137,Shelby County,AL
+35185,Shelby County,AL
+35187,Shelby County,AL
+35442,Sumter County,AL
+35477,Sumter County,AL
+36901,Sumter County,AL
+35032,Talladega County,AL
+35149,Talladega County,AL
+35010,Tallapoosa County,AL
+35006,Tuscaloosa County,AL
+35440,Tuscaloosa County,AL
+35449,Tuscaloosa County,AL
+35468,Tuscaloosa County,AL
+35478,Tuscaloosa County,AL
+35482,Tuscaloosa County,AL
+35486,Tuscaloosa County,AL
+35006,Walker County,AL
+35038,Walker County,AL
+35560,Walker County,AL
+35573,Walker County,AL
+35584,Walker County,AL
+36513,Washington County,AL
+36556,Washington County,AL
+36581,Washington County,AL
+36720,Wilcox County,AL
+36723,Wilcox County,AL
+36741,Wilcox County,AL
+36753,Wilcox County,AL
+36766,Wilcox County,AL
+35540,Winston County,AL
+35551,Winston County,AL
+35577,Winston County,AL
+99553,Aleutians East Borough,AK
+99612,Aleutians East Borough,AK
+99546,Aleutians West Census Area,AK
+99513,Anchorage Municipality,AK
+99529,Anchorage Municipality,AK
+99530,Anchorage Municipality,AK
+99599,Anchorage Municipality,AK
+99545,Bethel Census Area,AK
+99551,Bethel Census Area,AK
+99552,Bethel Census Area,AK
+99609,Bethel Census Area,AK
+99637,Bethel Census Area,AK
+99641,Bethel Census Area,AK
+99668,Bethel Census Area,AK
+99680,Bethel Census Area,AK
+99690,Bethel Census Area,AK
+99555,Dillingham Census Area,AK
+99678,Dillingham Census Area,AK
+99725,Fairbanks North Star Borough,AK
+99775,Fairbanks North Star Borough,AK
+99790,Fairbanks North Star Borough,AK
+99811,Juneau City and Borough,AK
+99605,Kenai Peninsula Borough,AK
+99635,Kenai Peninsula Borough,AK
+99663,Kenai Peninsula Borough,AK
+99918,Ketchikan Gateway Borough,AK
+99928,Ketchikan Gateway Borough,AK
+99550,Kodiak Island Borough,AK
+99608,Kodiak Island Borough,AK
+99624,Kodiak Island Borough,AK
+99643,Kodiak Island Borough,AK
+99644,Kodiak Island Borough,AK
+99548,Lake and Peninsula Borough,AK
+99565,Lake and Peninsula Borough,AK
+99648,Lake and Peninsula Borough,AK
+99652,Matanuska-Susitna Borough,AK
+99694,Matanuska-Susitna Borough,AK
+99721,North Slope Borough,AK
+99791,North Slope Borough,AK
+99761,Northwest Arctic Borough,AK
+99731,Southeast Fairbanks Census Area,AK
+99732,Southeast Fairbanks Census Area,AK
+99738,Southeast Fairbanks Census Area,AK
+99764,Southeast Fairbanks Census Area,AK
+99776,Southeast Fairbanks Census Area,AK
+99566,Valdez-Cordova Census Area,AK
+99677,Valdez-Cordova Census Area,AK
+99693,Valdez-Cordova Census Area,AK
+99554,Wade Hampton Census Area,AK
+99666,Wade Hampton Census Area,AK
+99590,Yukon-Koyukuk Census Area,AK
+99675,Yukon-Koyukuk Census Area,AK
+99720,Yukon-Koyukuk Census Area,AK
+99754,Yukon-Koyukuk Census Area,AK
+99788,Yukon-Koyukuk Census Area,AK
+85927,Apache County,AZ
+85930,Apache County,AZ
+85932,Apache County,AZ
+85940,Apache County,AZ
+86504,Apache County,AZ
+86506,Apache County,AZ
+86508,Apache County,AZ
+86511,Apache County,AZ
+86512,Apache County,AZ
+86515,Apache County,AZ
+86540,Apache County,AZ
+86544,Apache County,AZ
+86545,Apache County,AZ
+86547,Apache County,AZ
+85605,Cochise County,AZ
+85620,Cochise County,AZ

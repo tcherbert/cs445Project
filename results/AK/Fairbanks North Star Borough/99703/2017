@@ -1,0 +1,1 @@
+{"metadata":{"resultset":{"offset":1,"count":2,"limit":12}},"results":[{"date":"2017-01-01T00:00:00","datatype":"HDSD","station":"GHCND:USR0000AFAI","attributes":"6","value":7510.6},{"date":"2017-01-01T00:00:00","datatype":"HTDD","station":"GHCND:USR0000AFAI","attributes":"U","value":7510.6}]}
